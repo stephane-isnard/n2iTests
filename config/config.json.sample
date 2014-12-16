@@ -1,0 +1,7 @@
+{
+  "url":          "http://www.nuitdelinfo.com/n2i",
+  "debug":        true,
+  "capture":      true,
+  "viewportSize": {"x":1280, "y":622},
+  "admin":        {"login":"???", "pwd":"???"}
+}
