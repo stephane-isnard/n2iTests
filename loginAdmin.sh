@@ -9,6 +9,8 @@ if [ ! -d datas/$fichierSansExt ]; then
 fi
 if [ ! -d datas/$fichierSansExt/captures ]; then
     mkdir datas/$fichierSansExt/captures
+else
+    rm datas/$fichierSansExt/captures/capture*
 fi
 
 cat \
