@@ -13,8 +13,8 @@ casper.on('page.error', function(msg, trace) {
        this.echo('   ' + step.file + ' (line ' + step.line + ')', 'ERROR');
    }
 });
-casper.test.begin('Test', function(test) {
-   casper.start(config.URL);
+casper.test.begin('Test url: '+config.url, function(test) {
+   casper.start(config.url);
    test.comment("     LOGIN ADMIN     ");
    casper.waitForSelector(x("//a[normalize-space(text())='Login']"),
        function success() {
@@ -59,17 +59,12 @@ casper.test.begin('Test', function(test) {
    // CAPTURE ECRAN
    casper.then(function () {
        if ( config.capture ) {
-           casper.capture("./datas/"+fileSansExt+"/captures/capture.png");
-           test.comment("CAPTURE: ./datas/"+fileSansExt+"/captures/capture.png");
-       }
-   });
-
-
-   // CAPTURE ECRAN
-   casper.then(function () {
-       if ( config.capture ) {
-           casper.capture("./datas/"+fileSansExt+"/captures/capture.png");
-           test.comment("CAPTURE: ./datas/"+fileSansExt+"/captures/capture.png");
+           var i = 0;
+           while(fs.exists("./datas/"+fileSansExt+"/captures/capture-"+i+".png")) {
+             i++; 
+           }
+           casper.capture("./datas/"+fileSansExt+"/captures/capture-"+i+".png");
+           test.comment("CAPTURE: ./datas/"+fileSansExt+"/captures/capture-"+i+".png");
        }
    });
 
