@@ -19,7 +19,9 @@ casper.test.begin('Test url: '+config.url, function(test) {
       casper.setHttpAuth(config.authHttp.login, config.authHttp.pwd);
    }
 
-   test.comment("     LOGIN ADMIN     ");
+   casper.then(function () {
+       test.comment("     LOGIN ADMIN     ");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Login']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Login']"));

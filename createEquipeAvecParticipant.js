@@ -20,6 +20,10 @@ casper.test.begin('Test url: '+config.url, function(test) {
    }
 
 
+   //createLeader.js
+   casper.then(function () {
+       test.comment("createLeader.js");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Inscrire une équipe']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Inscrire une équipe']"));
@@ -111,7 +115,10 @@ casper.test.begin('Test url: '+config.url, function(test) {
    });
 
 
-   //createEquipe.js
+   //loginLeader.js
+   casper.then(function () {
+       test.comment("loginLeader.js");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Login']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Login']"));
@@ -161,6 +168,11 @@ casper.test.begin('Test url: '+config.url, function(test) {
            test.assertExists("form input[type=submit][value='Se connecter']");
    });
    /* submit form */
+
+   //createEquipe.js
+   casper.then(function () {
+       test.comment("createEquipe.js");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Créer mon équipe']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Créer mon équipe']"));
@@ -210,6 +222,9 @@ casper.test.begin('Test url: '+config.url, function(test) {
 
 
    //createParticipant.js
+   casper.then(function () {
+       test.comment("createParticipant.js");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Ajouter un participant']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Ajouter un participant']"));
@@ -290,6 +305,9 @@ casper.test.begin('Test url: '+config.url, function(test) {
 
 
    //deleteParticipant.js
+   casper.then(function () {
+       test.comment("deleteParticipant.js");
+   });
    casper.waitForSelector("a[data-nom='"+config.participant.prenom+" "+config.participant.nom+"']",
        function success() {
            test.assertExists("a[data-nom='"+config.participant.prenom+" "+config.participant.nom+"']");
@@ -317,6 +335,9 @@ casper.test.begin('Test url: '+config.url, function(test) {
 
 
   //deleteEquipe.js 
+   casper.then(function () {
+       test.comment("deleteEquipe.js");
+   });
    casper.waitForSelector(x("//a[normalize-space(text())='Supprimer mon equipe']"),
        function success() {
            test.assertExists(x("//a[normalize-space(text())='Supprimer mon equipe']"));

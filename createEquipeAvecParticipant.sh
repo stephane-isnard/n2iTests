@@ -16,6 +16,7 @@ fi
 cat \
 ./src/head.js \
 ./lib/createLeader.js \
+./lib/loginLeader.js \
 ./lib/createEquipe.js \
 ./lib/createParticipant.js \
 ./lib/deleteParticipant.js \
