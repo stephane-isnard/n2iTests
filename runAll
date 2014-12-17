@@ -1,0 +1,4 @@
+#!/bin/bash
+for sh in *.sh; do 
+   ./$sh;
+done
