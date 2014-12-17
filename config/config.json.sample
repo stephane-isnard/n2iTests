@@ -4,4 +4,8 @@
   "capture":      true,
   "viewportSize": {"x":1280, "y":622},
   "admin":        {"login":"???", "pwd":"???"}
+  "leader":       {"nom":"TEST LEADER","prenom":"Test Leader","mail":"stephane.isnard+leader@gmail.com","niveauBac":"3"},
+  "participant":  {"nom":"TEST PARTICIPANT","prenom":"Test Participant","mail":"stephane.isnard+participant@gmail.com","niveauBac":"3"},
+  "equipe":       {"nom":"Test équipe", "slogan":"Test slogan"},
+  "authHttp":     {"actif": true, "login":"", "pwd":""}
 }

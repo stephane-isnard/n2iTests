@@ -15,6 +15,10 @@ casper.on('page.error', function(msg, trace) {
 });
 casper.test.begin('Test url: '+config.url, function(test) {
    casper.start(config.url);
+   if(config.authHttp.actif) {
+      casper.setHttpAuth(config.authHttp.login, config.authHttp.pwd);
+   }
+
    test.comment("     LOGIN ADMIN     ");
    casper.waitForSelector(x("//a[normalize-space(text())='Login']"),
        function success() {
@@ -55,6 +59,13 @@ casper.test.begin('Test url: '+config.url, function(test) {
            test.assertExists("form input[type=submit][value='Se connecter']");
    });
    /* submit form */
+   casper.waitForSelector(x("//*[contains(text(), \' admin\')]"),
+       function success() {
+           test.assertExists(x("//*[contains(text(), \' admin\')]"));
+         },
+       function fail() {
+           test.assertExists(x("//*[contains(text(), \' admin\')]"));
+   });
    // lib/allerParametres.js
    casper.then(function () {
        test.comment("allerParametres.js");

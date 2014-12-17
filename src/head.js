@@ -15,3 +15,7 @@ casper.on('page.error', function(msg, trace) {
 });
 casper.test.begin('Test url: '+config.url, function(test) {
    casper.start(config.url);
+   if(config.authHttp.actif) {
+      casper.setHttpAuth(config.authHttp.login, config.authHttp.pwd);
+   }
+
