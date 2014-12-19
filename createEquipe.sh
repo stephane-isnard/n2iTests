@@ -1,5 +1,4 @@
 #!/bin/bash
-#éé
 me=`basename $0`
 IFS='.' read -a array <<< "$me"
 fichier="${array[0]}.js" 
