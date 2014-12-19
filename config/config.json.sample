@@ -6,6 +6,7 @@
   "admin":        {"login":"???", "pwd":"???"}
   "leader":       {"nom":"TEST LEADER","prenom":"Test Leader","mail":"stephane.isnard+leader@gmail.com","niveauBac":"3"},
   "participant":  {"nom":"TEST PARTICIPANT","prenom":"Test Participant","mail":"stephane.isnard+participant@gmail.com","niveauBac":"3"},
+  "partenaire":   {"nom":"TEST PARTENAIRE","mail":"stephane.isnard+partenaire@gmail.com"},
   "equipe":       {"nom":"Test équipe", "slogan":"Test slogan"},
   "authHttp":     {"actif": true, "login":"", "pwd":""}
 }
