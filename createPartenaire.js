@@ -89,9 +89,9 @@ casper.test.begin('Test url: '+config.url, function(test) {
    });
 
 
-   //loginParticipant.js
+   //loginPartenaire.js
    casper.then(function () {
-       test.comment("loginParticipant.js");
+       test.comment("loginPartenaire.js");
    });
 
    casper.waitForSelector(x("//a[normalize-space(text())='Login']"),
