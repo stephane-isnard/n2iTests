@@ -22,6 +22,6 @@ cat \
 ./lib/suppressionParametre.js \
 ./src/capture.js \
 ./src/foot.js \
-> $fichier
+> scripts/$fichier
 
-casperjs test $fichier
+casperjs test scripts/$fichier

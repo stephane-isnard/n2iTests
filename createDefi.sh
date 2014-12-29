@@ -27,6 +27,6 @@ cat \
 ./lib/deletePartenaire.js \
 ./src/capture.js \
 ./src/foot.js \
-> $fichier
+> scripts/$fichier
 
 casperjs test $fichier

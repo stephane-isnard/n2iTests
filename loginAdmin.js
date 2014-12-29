@@ -1,5 +1,5 @@
 var fs         = require('fs');
-var configjson = fs.read('config/config.json');
+var configjson = fs.read('./config/config.json');
 var config     = JSON.parse(configjson);
 var x          = require('casper').selectXPath;
 var filename   = casper.cli.get(0);
