@@ -5,13 +5,13 @@ IFS='.' read -a array <<< "$me"
 fichier="${array[0]}.js" 
 fichierSansExt="${array[0]}"
 
-if [ ! -d datas/$fichierSansExt ]; then
-    mkdir datas/$fichierSansExt
+if [ ! -d datas/scripts/$fichierSansExt ]; then
+    mkdir datas/scripts/$fichierSansExt
 fi
-if [ ! -d datas/$fichierSansExt/captures ]; then
-    mkdir datas/$fichierSansExt/captures
+if [ ! -d datas/scripts/$fichierSansExt/captures ]; then
+    mkdir datas/scripts/$fichierSansExt/captures
 else
-    rm datas/$fichierSansExt/captures/capture*
+    rm datas/scripts/$fichierSansExt/captures/capture*
 fi
 cat \
 ./src/head.js \
@@ -29,4 +29,4 @@ cat \
 ./src/foot.js \
 > scripts/$fichier
 
-casperjs test $fichier
+casperjs test scripts/$fichier
