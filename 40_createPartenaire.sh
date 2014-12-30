@@ -21,6 +21,7 @@ cat \
 ./lib/loginAdmin.js \
 ./lib/allerPartenaire.js \
 ./lib/deletePartenaire.js \
+./src/logout.js \
 ./src/capture.js \
 ./src/foot.js \
 > scripts/$fichier

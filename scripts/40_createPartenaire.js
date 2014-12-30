@@ -257,6 +257,27 @@ casper.test.begin('Test url: '+config.url, function(test) {
            test.assertExists(x("//*[contains(text(), \'Suppression effectuée("+config.partenaire.nom+")\')]"));
    });
 
+   //logout.js
+   casper.then(function () {
+       test.comment("logout.js");
+   });
+
+   casper.waitForSelector(x("//a[normalize-space(text())='Logout']"),
+       function success() {
+           test.assertExists(x("//a[normalize-space(text())='Logout']"));
+           this.click(x("//a[normalize-space(text())='Logout']"));
+       },
+       function fail() {
+           test.assertExists(x("//a[normalize-space(text())='Logout']"));
+   });
+   casper.waitForSelector(x("//*[contains(text(), \'Login\')]"),
+       function success() {
+           test.assertExists(x("//*[contains(text(), \'Login\')]"));
+         },
+       function fail() {
+           test.assertExists(x("//*[contains(text(), \'Login\')]"));
+   });
+
    // CAPTURE ECRAN
    casper.then(function () {
        if ( config.capture ) {

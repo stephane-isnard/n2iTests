@@ -396,18 +396,26 @@ casper.test.begin('Test url: '+config.url, function(test) {
            test.assertExists(x("//*[contains(text(), \'Suppression effectuée("+config.partenaire.nom+")\')]"));
    });
 
-   // CAPTURE ECRAN
+   //logout.js
    casper.then(function () {
-       if ( config.capture ) {
-           var i = 0;
-           while(fs.exists("./datas/"+fileSansExt+"/captures/capture-"+i+".png")) {
-             i++; 
-           }
-           casper.capture("./datas/"+fileSansExt+"/captures/capture-"+i+".png");
-           test.comment("CAPTURE: ./datas/"+fileSansExt+"/captures/capture-"+i+".png");
-       }
+       test.comment("logout.js");
    });
 
+   casper.waitForSelector(x("//a[normalize-space(text())='Logout']"),
+       function success() {
+           test.assertExists(x("//a[normalize-space(text())='Logout']"));
+           this.click(x("//a[normalize-space(text())='Logout']"));
+       },
+       function fail() {
+           test.assertExists(x("//a[normalize-space(text())='Logout']"));
+   });
+   casper.waitForSelector(x("//*[contains(text(), \'Login\')]"),
+       function success() {
+           test.assertExists(x("//*[contains(text(), \'Login\')]"));
+         },
+       function fail() {
+           test.assertExists(x("//*[contains(text(), \'Login\')]"));
+   });
 
 //FOOT
    casper.run(function() {test.done();});

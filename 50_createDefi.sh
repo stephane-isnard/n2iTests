@@ -25,7 +25,7 @@ cat \
 ./lib/deleteDefi.js \
 ./lib/allerPartenaire.js \
 ./lib/deletePartenaire.js \
-./src/capture.js \
+./src/logout.js \
 ./src/foot.js \
 > scripts/$fichier
 
