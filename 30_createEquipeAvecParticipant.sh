@@ -15,12 +15,12 @@ else
 fi
 cat \
 ./src/head.js \
-./lib/createLeader.js \
-./lib/loginLeader.js \
-./lib/createEquipe.js \
-./lib/createParticipant.js \
-./lib/deleteParticipant.js \
-./lib/deleteEquipe.js \
+./lib/leader_create.js \
+./lib/login_leader.js \
+./lib/equipe_create.js \
+./lib/participant_create.js \
+./lib/participant_delete.js \
+./lib/equipe_delete.js \
 ./src/capture.js \
 ./src/foot.js \
 > scripts/$fichier

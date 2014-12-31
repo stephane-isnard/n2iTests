@@ -15,16 +15,16 @@ else
 fi
 cat \
 ./src/head.js \
-./lib/createPartenaire.js \
-./lib/loginPartenaire.js \
-./lib/createDefi.js \
+./lib/partenaire_create.js \
+./lib/login_partenaire.js \
+./lib/defi_create.js \
 ./src/capture.js \
 ./src/logout.js \
-./lib/loginAdmin.js \
-./lib/allerDefi.js \
-./lib/deleteDefi.js \
-./lib/allerPartenaire.js \
-./lib/deletePartenaire.js \
+./lib/login_admin.js \
+./lib/defi_display.js \
+./lib/defi_delete.js \
+./lib/partenaire_display.js \
+./lib/partenaire_delete.js \
 ./src/logout.js \
 ./src/foot.js \
 > scripts/$fichier

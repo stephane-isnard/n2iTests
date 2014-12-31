@@ -15,7 +15,7 @@ fi
 
 cat \
 ./src/head.js \
-./lib/loginAdmin.js \
+./lib/login_admin.js \
 ./src/capture.js \
 ./src/foot.js \
 > scripts/$fichier

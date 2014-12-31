@@ -15,12 +15,12 @@ else
 fi
 cat \
 ./src/head.js \
-./lib/createPartenaire.js \
-./lib/loginPartenaire.js \
+./lib/partenaire_create.js \
+./lib/login_partenaire.js \
 ./src/logout.js \
-./lib/loginAdmin.js \
-./lib/allerPartenaire.js \
-./lib/deletePartenaire.js \
+./lib/login_admin.js \
+./lib/partenaire_display.js \
+./lib/partenaire_delete.js \
 ./src/logout.js \
 ./src/capture.js \
 ./src/foot.js \

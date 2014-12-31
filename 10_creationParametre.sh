@@ -15,11 +15,11 @@ fi
 
 cat \
 ./src/head.js \
-./lib/loginAdmin.js \
-./lib/allerParametre.js \
+./lib/login_admin.js \
+./lib/parametre_display.js \
 ./src/capture.js \
-./lib/creationParametre.js \
-./lib/suppressionParametre.js \
+./lib/parametre_create.js \
+./lib/parametre_delete.js \
 ./src/capture.js \
 ./src/foot.js \
 > scripts/$fichier
